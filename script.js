@@ -481,3 +481,22 @@ const modalStyles = `
 `;
 
 document.head.insertAdjacentHTML('beforeend', modalStyles);
+
+  function handleSubmit(event) {
+    event.preventDefault();
+
+    const form = document.getElementById('contactForm');
+    const checkbox = document.getElementById('agree');
+
+    if (!checkbox.checked) {
+      alert('Please agree to the terms and conditions before submitting.');
+      return false;
+    }
+
+    if (form.checkValidity()) {
+      alert("Thank you! Your message has been submitted.");
+      form.reset(); // Reset form after submission
+    }
+
+    return false; // prevent actual form submission
+  }
