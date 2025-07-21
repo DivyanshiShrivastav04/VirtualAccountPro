@@ -322,35 +322,48 @@
                    
                 </div>
                 <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Full Name *</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address *</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="business">Business Type</label>
-                            <select id="business" name="business">
-                                <option value="">Select Business Type</option>
-                                <option value="retail">Retail</option>
-                                <option value="manufacturing">Manufacturing</option>
-                                <option value="services">Services</option>
-                                <option value="technology">Technology</option>
-                                <option value="healthcare">Healthcare</option>
-                                <option value="restaurant">Restaurant/Food</option>
-                                <option value="consulting">Consulting</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message *</label>
-                            <textarea id="message" name="message" rows="5" placeholder="Tell us about your accounting needs..." required></textarea>
-                        </div>
-                        <button type="submit" class="submit-btn">Send Message</button>
-                    </form>
+                    <form id="contactForm" onsubmit="return handleSubmit(event)">
+    <div class="form-group">
+        <label for="name">Full Name *</label>
+        <input type="text" id="name" name="name" required>
+    </div>
+    <div class="form-group">
+        <label for="email">Email Address *</label>
+        <input type="email" id="email" name="email" required>
+    </div>
+    <div class="form-group">
+        <label for="business">Business Type</label>
+        <select id="business" name="business">
+            <option value="">Select Business Type</option>
+            <option value="retail">Retail</option>
+            <option value="manufacturing">Manufacturing</option>
+            <option value="services">Services</option>
+            <option value="technology">Technology</option>
+            <option value="healthcare">Healthcare</option>
+            <option value="restaurant">Restaurant/Food</option>
+            <option value="consulting">Consulting</option>
+            <option value="other">Other</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="message">Message *</label>
+        <textarea id="message" name="message" rows="5" placeholder="Tell us about your accounting needs..." required></textarea>
+    </div>
+
+    <!-- ✅ Checkbox Field -->
+
+<div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 20px; font-family: Inter, sans-serif; font-size: 14px; line-height: 1.4;">
+  <input type="checkbox" id="agree" name="agree" required style="margin-top: 3px;">
+  <label for="agree" style="margin: 0;">
+    By submitting this form, you agree to receive text messages from Timeless Garden. See our 
+    <a href="privacy-policy.html" target="_blank" style="color: #007bff; text-decoration: underline;">Privacy Policy.</a>
+  </label>
+</div>
+
+
+
+    <button type="submit" class="submit-btn">Send Message</button>
+</form>
                 </div>
             </div>
         </div>
